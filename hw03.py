@@ -1,7 +1,7 @@
 """
 Name: Annie Lischer
 Peers: N/A
-References: [PENDING]
+References: N/A
 """
 
 # imported modules
@@ -92,7 +92,21 @@ def pick_visualization(average):
     Any other input prints
     'Error in pick_visualization: incorrect option picked'.
     """
-    pass
+    #receiving user input
+    option=input("Pick '1' for print average, or '2' for plot average: ")
+    
+    #if user chooses option 1 calls relevant func
+    if option=="1":
+        print_list_and_average(average)
+    
+    #if user chooses option 2 calls relevant func
+    elif option=="2":
+        plot_grades(average)
+    
+    #if none of the above apply it returns an error message and ends the code
+    else:
+        print("Error in pick_visualization: incorrect option picked")
+        exit()
 
 
 # ---------------------------------------
