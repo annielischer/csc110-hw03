@@ -1,7 +1,7 @@
 """
-Name: (put your name here)
-Peers: (add any collaborators)
-References: (anything you checked to solve this)
+Name: Annie Lischer
+Peers: N/A
+References: [PENDING]
 """
 
 # imported modules
@@ -23,13 +23,24 @@ def read_five_ints():
     "Error in read_five_ints: input integer outside of range".
     """
     for idx in range ( len(grades) ):
-        # for each idx in 0, 1,... 4 do:
-        # check if the input is not a digit print error
-        # convert to int
-        # check if the int is not in the interval [0 to 10] print error
-        # add the int to grades at index idx
-
-        pass
+        num=input("Give me the next grade in [0 to 10]:")
+        
+        #checks if num is a digit
+        if num.isdigit()==False:
+            print("Error in read_five_ints: input string is not for an integer")
+            exit()
+        
+        #now we know num is a digit so we can cast it as an int
+        num=int(num)
+        
+        #checks if num is in range (checking if it's less than 0 is unnecessary because negative numbers can't be represented by only digits)
+        if num>10 or num<0:
+            print("Error in read_five_ints: input integer outside of range")
+            exit()
+        
+        #places num into grades
+        grades[idx] = num
+        
 
     #Anything with this indentation is NO LONGER inside the loop
 
